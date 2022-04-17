@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/personImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_background"
+                android:transitionName="image1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Person name"
+            android:textColor="@color/mainTextView"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageCard"
+            app:layout_constraintWidth_max="250dp" />
+
+        <TextView
+            android:id="@+id/tvIll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:text="Gender: "
+            android:textColor="@color/mainTextView"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonName" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:elevation="2dp"
+            android:padding="4dp"
+            android:text="gender"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/tvIll1"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonName" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/orange_view_background"
+            app:layout_constraintBottom_toBottomOf="@id/tvGender"
+            app:layout_constraintEnd_toEndOf="@id/tvGender"
+            app:layout_constraintStart_toStartOf="@id/tvGender"
+            app:layout_constraintTop_toTopOf="@id/tvGender" />
+
+        <TextView
+            android:id="@+id/tvIll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Species: "
+            android:textColor="@color/mainTextView"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvSpecies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvSpecies" />
+
+
+        <TextView
+            android:id="@+id/tvSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="6dp"
+            android:elevation="2dp"
+            android:padding="4dp"
+            android:text="species"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/tvIll1"
+            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/blue_view_background"
+            app:layout_constraintBottom_toBottomOf="@id/tvSpecies"
+            app:layout_constraintEnd_toEndOf="@id/tvSpecies"
+            app:layout_constraintStart_toStartOf="@id/tvSpecies"
+            app:layout_constraintTop_toTopOf="@id/tvSpecies" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
